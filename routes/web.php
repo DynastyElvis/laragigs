@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,16 +14,61 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('listings', [
+        'heading' => 'Latest Listings',
+        'listings' => [
+            [
+                'id' => 1,
+                'title' => 'Listing one',
+                'description' => 'Listing oneListing oneListing oneListing oneListing oneListing oneListing one'
+            ],
+            [
+                'id' => 2,
+                'title' => 'Listing two',
+                'description' => 'Listing oneListing oneListing oneListing oneListing oneListing oneListing one'
+            ]
+        ]
+    ]);
 });
 
-Route::get('hello', function () {
-    return response('hello world');
-});
+
+// Route::get('/', function () {
+//     return view('listings',
+
+//     [
+//         'heading' => 'Latest Listings',
+//         'listings' => 
+//         [
+//             'id' => 1,
+//             'title' => 'Listing one',
+//             'description' => 'Listing oneListing oneListing oneListing oneListing oneListing oneListing one
+//         '
+        
+//         ],
+
+//         [
+//             'id' => 2,
+//             'title' => 'Listing two',
+//             'description' => 'Listing oneListing oneListing oneListing oneListing oneListing oneListing one
+//         '
+//         ]
+//     ]);
+
+// });
+
+// Route::get('hello', function () {
+//     return response('hello world');
+// });
 
 
-Route::get('posts/{id}', function ($id) {
-    ddd($id);
-    return response(('Post' . $id));
-})->where('id', '[0-9]+');
+// Route::get('posts/{id}', function ($id) {
+//     // ddd($id);
+//     return response(('Post' . $id));
+// })->where('id', '[0-9]+');
+
+
+// Route::get('/search', function(Request $request) {
+//     return($request->name . '' . $request->city);        
+// });
