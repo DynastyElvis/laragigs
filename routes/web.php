@@ -10,3 +10,11 @@ Route::get('/', function () {
         'listings' => Listing::all()
     ]);
 });
+
+
+Route::get('/listing/{id}', function ($id) {
+    $listing = Listing::find($id);
+    return view('listing', [
+        'listing' => $listing
+    ]);
+});

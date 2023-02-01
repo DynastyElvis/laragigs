@@ -17,4 +17,13 @@ class Listing {
             ]
         ];
     }
+
+public static function find($id) {
+        $listings = self::all();
+{
+
+    return $listings;
+
+}}
+
 }
