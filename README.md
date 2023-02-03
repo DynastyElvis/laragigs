@@ -1,8 +1,9 @@
 # LaraGigs app
-Laragigs is an App that gives a platform users to Register and post their Laravel projects Gigs and other users can view the available jobs and get intouch.
+Laragigs is an App that gives a platform users to Register and post their Laravel Projects Gigs and other users can view the available jobs and get intouch.
 
 
 ## Usage
+
 
 ### Database Setup
 This app uses MySQL. To use something different, open up config/Database.php and change the default driver.
