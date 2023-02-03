@@ -1,4 +1,6 @@
 # LaraGigs app
+Laragigs is an App that gives a platform users to Register and post their Laravel projects Gigs and other users can view the available jobs and get intouch.
+
 
 ## Usage
 
